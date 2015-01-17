@@ -17,6 +17,16 @@ public class Test {
 		
 		scan.close();
 		
-		System.out.println(liarDeck);
+		final int PLAYERS = 4;
+		//players class?
+		Cards p1 = new Cards();
+		Cards p2 = new Cards();
+		Cards p3 = new Cards();
+		Cards p4 = new Cards();
+		p1.drawCard(liarDeck, 2);
+		p2.drawCard(liarDeck, 2);
+		p3.drawCard(liarDeck, 2);
+		p4.drawCard(liarDeck, 2);
+		System.out.println(liarDeck.choices());
 	}
 }
