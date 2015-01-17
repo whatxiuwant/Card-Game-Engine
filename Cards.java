@@ -48,8 +48,24 @@ public class Cards {
 		}
 	}
 	
-	public String[] choices() {
-		String[] strs = new String[70];
+	public ArrayList<String> choices() {
+		ArrayList<String> strs = new ArrayList<String>();
+		String[] types = {"Single", "Double", "Triple", "Straight", "Flush", "House",
+				"Straight Flush", "4 of a Kind", "5 of a Kind", "Royal Flush",
+				"6 of a Kind", "7 of a Kind", "Dragon", "8 of a Kind", "Double Dragon"};
+		String[] rankTypes = {"", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+		String[] suitTypes = {"Diamond", "Heart", "Club", "Spade"};
+		String[] straightTypes = {"up to 5", "up to 6", "up to 7", "up to 8", "up to 9", "up to 10", "up to Jack", "up to Queen", "up to King", "up to Ace", "up to 2"};
+		//updates: specificity with types and houses;
+		int idx = 0;
+		for (int i = 0; i < types.length; i++) {
+				strs.add(types[i]);
+		/*
+			for (int j = 0; j < rankTypes.length; j++) {
+				strs[idx] = types[i] + " " + rankTypes[j];
+				idx++;
+		}*/}
+				
 		
 		return strs;
 	}

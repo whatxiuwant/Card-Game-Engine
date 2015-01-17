@@ -27,6 +27,15 @@ public class Test {
 		p2.drawCard(liarDeck, 2);
 		p3.drawCard(liarDeck, 2);
 		p4.drawCard(liarDeck, 2);
-		System.out.println(liarDeck.choices());
+		String[] temp = new String[p1.choices().size()];
+		for (int i = 0; i < p1.choices().size(); i++) {
+			temp[i] = "" + i + " " + p1.choices().get(i);
+			System.out.println(temp[i]);
+		}
+		Scanner scanPlay = new Scanner(System.in);
+		int choice = scanPlay.nextInt();
+		for (int i = 0; i < temp.length; i++)
+			if (choice == Integer.parseInt(temp[i].substring(0, 1)))
+				System.out.println(p1.choices().get(i));
 	}
 }
