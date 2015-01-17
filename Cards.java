@@ -59,8 +59,8 @@ public class Cards {
 		//updates: specificity with types and houses;
 		strs.add("0 View Cards");
 		strs.add("1 Bull");
-		for (int i = 0; i < types.length; i++) {
-				strs.add(i + " " + types[i]);
+		for (int i = 2; i < types.length + 2; i++) {
+				strs.add(i + " " + types[i - 2]);
 		/*
 			for (int j = 0; j < rankTypes.length; j++) {
 				strs[idx] = types[i] + " " + rankTypes[j];

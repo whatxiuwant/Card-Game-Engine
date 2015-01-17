@@ -20,16 +20,10 @@ public class Test {
 		final int PLAYERS = 4;
 		//players class? not really ... cards is in a sense player;
 		//player class with action methods, extend cards;
-		Cards p1 = new Cards();
-		Cards p2 = new Cards();
-		Cards p3 = new Cards();
-		Cards p4 = new Cards();
-		p1.drawCard(liarDeck, 2);
-		p2.drawCard(liarDeck, 2);
-		p3.drawCard(liarDeck, 2);
-		p4.drawCard(liarDeck, 2);
-		Scanner scanPlay = new Scanner(System.in);
-		int choice = scanPlay.nextInt();
+		Cards p1 = new Cards(); Cards p2 = new Cards();	Cards p3 = new Cards(); Cards p4 = new Cards();
+		p1.drawCard(liarDeck, 2); p2.drawCard(liarDeck, 2); p3.drawCard(liarDeck, 2); p4.drawCard(liarDeck, 2);
 		System.out.println(liarDeck.choices());
+		Scanner scanPlay = new Scanner(System.in);
+		System.out.println(liarDeck.choice(scanPlay.nextInt()));
 	}
 }
