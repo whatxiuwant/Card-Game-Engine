@@ -71,13 +71,13 @@ public class Cards {
 		return strs;
 	}
 	
-	public String choice(int choice) {
+	public void choice(int choice) {
 		for (int i = 0; i < choices().size(); i++)
 			if (choice == Integer.parseInt(choices().get(i).substring(0, 1))) {
-				return choices().get(i);
-				//return;
-			}
-		
-		return "Invalid choice.";
+				switch (choice) {
+				case 0: System.out.println(getCards()); break;
+				case 1: break;
+				default: System.out.println(choices().get(choice)); break;
+		}}
 	}
 }

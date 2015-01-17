@@ -24,6 +24,6 @@ public class Test {
 		p1.drawCard(liarDeck, 2); p2.drawCard(liarDeck, 2); p3.drawCard(liarDeck, 2); p4.drawCard(liarDeck, 2);
 		System.out.println(liarDeck.choices());
 		Scanner scanPlay = new Scanner(System.in);
-		System.out.println(liarDeck.choice(scanPlay.nextInt()));
+		p1.choice(scanPlay.nextInt());
 	}
 }
