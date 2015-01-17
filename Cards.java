@@ -50,24 +50,6 @@ public class Cards {
 	
 	public String[] choices() {
 		String[] strs = new String[70];
-		int idx = 0;
-		for (int j = 0; j < 5; j++) {
-			if (j == 0) 
-				for (int i = 3; i <= 10; i++) {
-					strs[idx] = "Single " + i;
-					idx++;
-				}
-			if (j == 1)
-				for (int i = 3; i <= 10; i++) {
-					strs[idx] = "Double " + i;
-					idx++;
-				}
-			if (j == 2)
-				for (int i = 3; i <= 10; i++) {
-					strs[idx] = "Triple " + i;
-					idx++; idx++;
-				}
-		}
 		
 		return strs;
 	}
