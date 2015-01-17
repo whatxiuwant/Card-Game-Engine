@@ -57,9 +57,10 @@ public class Cards {
 		String[] suitTypes = {"Diamond", "Heart", "Club", "Spade"};
 		String[] straightTypes = {"up to 5", "up to 6", "up to 7", "up to 8", "up to 9", "up to 10", "up to Jack", "up to Queen", "up to King", "up to Ace", "up to 2"};
 		//updates: specificity with types and houses;
-		int idx = 0;
+		strs.add("0 View Cards");
+		strs.add("1 Bull");
 		for (int i = 0; i < types.length; i++) {
-				strs.add(types[i]);
+				strs.add(i + " " + types[i]);
 		/*
 			for (int j = 0; j < rankTypes.length; j++) {
 				strs[idx] = types[i] + " " + rankTypes[j];
@@ -68,5 +69,15 @@ public class Cards {
 				
 		
 		return strs;
+	}
+	
+	public String choice(int choice) {
+		for (int i = 0; i < choices().size(); i++)
+			if (choice == Integer.parseInt(choices().get(i).substring(0, 1))) {
+				return choices().get(i);
+				//return;
+			}
+		
+		return "Invalid choice.";
 	}
 }
