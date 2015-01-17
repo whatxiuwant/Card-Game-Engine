@@ -48,8 +48,7 @@ public class Cards {
 		}
 	}
 	
-	public String choices() {
-		String str = "";
+	public String[] choices() {
 		String[] strs = new String[70];
 		int idx = 0;
 		for (int j = 0; j < 5; j++) {
@@ -66,14 +65,10 @@ public class Cards {
 			if (j == 2)
 				for (int i = 3; i <= 10; i++) {
 					strs[idx] = "Triple " + i;
-					idx++;
+					idx++; idx++;
 				}
 		}
 		
-		
-		for (int i = 0; i < strs.length; i++)
-			str += "\n" + strs[i];
-		
-		return str;
+		return strs;
 	}
 }
