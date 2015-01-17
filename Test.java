@@ -4,21 +4,19 @@ import java.io.*;
 
 public class Test {
 	public static void main(String[] args) throws IOException {
-		File input = new File("Liar Deck.csv");
+		File input = new File("Liar_Deck.csv");
+
 		Scanner scan = new Scanner(input);
-		int length = 0;
-		while (scan.hasNextLine()) {length++;}
-		scan.close();
-		Deck liarDeck = new Deck(length);
-		int idx = 0;
-		Scanner scan2 = new Scanner(input);
+		Cards liarDeck = new Cards();
+		
 		while (scan.hasNextLine()) {
 			String[] data = scan.nextLine().split(",");
 			Card card = new Card(Integer.parseInt(data[0]), Integer.parseInt(data[1]));
-			liarDeck.set(idx, card);
-			idx++;
+			liarDeck.add(card);
 		}
-		scan2.close();
+		
+		scan.close();
+		
 		System.out.println(liarDeck);
 	}
 }
