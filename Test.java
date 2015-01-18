@@ -20,10 +20,27 @@ public class Test {
 		final int PLAYERS = 4;
 		//players class? not really ... cards is in a sense player;
 		//player class with action methods, extend cards;
-		Cards p1 = new Cards(); Cards p2 = new Cards();	Cards p3 = new Cards(); Cards p4 = new Cards();
-		p1.drawCard(liarDeck, 2); p2.drawCard(liarDeck, 2); p3.drawCard(liarDeck, 2); p4.drawCard(liarDeck, 2);
-		System.out.println(liarDeck.choices());
+		Cards p1 = new Cards(); Cards p2 = new Cards();
+		p1.drawCard(liarDeck, 2); p2.drawCard(liarDeck, 2);
+		System.out.println(p1.getCards());
+		System.out.println(p1.choices());
 		Scanner scanPlay = new Scanner(System.in);
-		p1.choice(scanPlay.nextInt());
+		
+		while(isGameOver() == false) {
+			int temp = scanPlay.nextInt();
+			System.out.println(p1.choices(temp));
+			System.out.println(p1.choice(temp));
+			System.out.println(generateAITurn(p2));
+		}
+	}
+	
+	public static String generateAITurn(Cards player) {
+		return player.choice((int) (Math.random() * player.choices().size()));
+	}
+	
+	public static boolean isGameOver() {
+		//when someone calls bull;
+		//when someone has 6 cards, kick them;
+		return false;
 	}
 }
